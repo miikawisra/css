@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 25px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: lightgreen;
+            padding: 25px;
+            border-radius: 9px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: 3px solid black;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+
+      
+        .form-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px; /* Lisää väliä elementtien väliin */
+            margin-bottom: 10px;
+        }
+
+        label {
+            width: 150px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="file"] {
+            flex: 1;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+
+        
+        .contact-method {
+            margin-left: 20px;
+        }
+
+        input[type="checkbox"] {
+            margin-left: 10px;
+        }
+
+        
+        input[type="submit"] {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: black;
+        }
+
+        
+        @media (max-width: 600px) {
+            .form-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            input, textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<form action="#" method="post">
+    <fieldset>
+        <legend>Contact information:</legend>
+        
+        <div class="form-group">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+            
+            <label class="contact-method">Preferred contact method:</label>
+        </div>
+
+        <div class="form-group">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname">
+            
+            <input type="checkbox" id="email_check" name="contact_method" value="email">
+            <label for="email_check">Email</label>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="example@email.com">
+            
+            <input type="checkbox" id="phone_check" name="contact_method" value="phone">
+            <label for="phone_check">Telephone</label>
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Telephone:</label>
+            <input type="text" id="telephone" name="telephone" placeholder="+358 40 123 4567">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Feedback:</legend>
+
+        <div class="form-group">
+            <label for="subject">Message subject:</label>
+            <input type="text" id="subject" name="subject">
+        </div>
+
+        <div class="form-group">
+            <textarea name="message" rows="10" cols="50" placeholder="Kirjoita tähän"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="file">Attach a file:</label>
+            <input type="file" id="file" name="file">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Send">
+        </div>
+    </fieldset>
+</form>
+
+</body>
+</html>
