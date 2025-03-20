@@ -1,0 +1,91 @@
+/* Yleiset tyylit */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 25px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background: lightgreen;
+    padding: 25px;
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 3px solid black;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Lomakkeen kentät ja layout */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    width: 150px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    flex: 1;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Checkboxien muotoilu */
+.contact-method {
+    margin-left: 20px;
+}
+
+input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+/* Nappien tyylit */
+input[type="submit"] {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: black;
+}
+
+/* Responsiivisuus mobiilille */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+}
